@@ -372,42 +372,42 @@ steps:
         <span class="section-subtitle">Test-Driven Development</span>
         <h2>TDD with Superpowers</h2>
 
-        <div class="workflow-diagram">
-          <div class="workflow-step active fragment fade-up">
+        <div class="workflow-diagram" style="margin:0.8em 0;">
+          <div class="workflow-step active fragment fade-up" style="padding:20px 18px;">
             <span class="step-number">Step 1</span>
             <span class="step-icon">&#128506;</span>
             <h4>Plan</h4>
-            <p>Explore codebase, understand requirements, design approach</p>
+            <p>Explore codebase &amp; design approach</p>
           </div>
           <span class="workflow-arrow fragment fade-up">&rarr;</span>
-          <div class="workflow-step fragment fade-up">
+          <div class="workflow-step fragment fade-up" style="padding:20px 18px;">
             <span class="step-number">Step 2</span>
             <span class="step-icon">&#128221;</span>
             <h4>Write Tests</h4>
-            <p>Define expected behavior before implementation</p>
+            <p>Define expected behavior first</p>
           </div>
           <span class="workflow-arrow fragment fade-up">&rarr;</span>
-          <div class="workflow-step fragment fade-up">
+          <div class="workflow-step fragment fade-up" style="padding:20px 18px;">
             <span class="step-number">Step 3</span>
             <span class="step-icon">&#128187;</span>
             <h4>Implement</h4>
             <p>Write code to make tests pass</p>
           </div>
           <span class="workflow-arrow fragment fade-up">&rarr;</span>
-          <div class="workflow-step fragment fade-up">
+          <div class="workflow-step fragment fade-up" style="padding:20px 18px;">
             <span class="step-number">Step 4</span>
             <span class="step-icon">&#9989;</span>
             <h4>Validate</h4>
-            <p>Run full suite, fix failures, iterate</p>
+            <p>Run suite, fix failures, iterate</p>
           </div>
         </div>
 
-        <div class="claude-bg fragment fade-up" style="margin-top:1.5em; font-size:0.8em;">
-          <strong>Claude Code advantage:</strong> The agent naturally follows this loop &mdash; it can explore the codebase (Plan), generate comprehensive test cases (Test), implement the solution (Code), and run the tests to verify (Validate) &mdash; all in a single session without manual intervention.
+        <div class="claude-bg fragment fade-up" style="margin-top:0.6em; font-size:0.72em; padding:12px 20px;">
+          <strong>Claude Code advantage:</strong> The agent follows this loop autonomously &mdash; explore, test, implement, and validate in a single session without manual intervention.
         </div>
 
-        <div class="comparison-grid fragment fade-up" style="margin-top:1em;">
-          <div class="col claude-col">
+        <div class="comparison-grid fragment fade-up" style="margin-top:0.6em; gap:24px;">
+          <div class="col claude-col" style="padding:24px;">
             <h3><span class="claude-highlight">Claude Code</span></h3>
             <ul>
               <li>Autonomous Plan &rarr; Test &rarr; Code loop</li>
@@ -415,7 +415,7 @@ steps:
               <li>Understands full project test conventions</li>
             </ul>
           </div>
-          <div class="col copilot-col">
+          <div class="col copilot-col" style="padding:24px;">
             <h3><span class="copilot-highlight">Copilot</span></h3>
             <ul>
               <li>Suggests test code inline</li>
