@@ -37,122 +37,158 @@
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 2 — Comparison Matrix
+           SLIDE 2 — Copilot-Style Workflow
            ════════════════════════════════════════════════ -->
       <section>
         <div class="slide-accent-bar"></div>
-        <span class="section-subtitle">Head to Head</span>
-        <h2>Feature Comparison Matrix</h2>
+        <span class="section-subtitle">The Status Quo</span>
+        <h2>The Copilot-Style Workflow</h2>
 
-        <table>
-          <thead>
-            <tr>
-              <th style="width:40%">Capability</th>
-              <th style="width:30%; text-align:center">
-                <span class="claude-highlight">Claude Code</span>
-              </th>
-              <th style="width:30%; text-align:center">
-                <span class="copilot-highlight">Copilot</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="fragment fade-up">
-              <td><strong>Agentic Architecture</strong></td>
-              <td style="text-align:center"><span class="check">&#10003;</span> Autonomous agent</td>
-              <td style="text-align:center"><span class="partial">~</span> Chat + autocomplete</td>
-            </tr>
-            <tr class="fragment fade-up">
-              <td><strong>Custom Skills System</strong></td>
-              <td style="text-align:center"><span class="check">&#10003;</span> YAML-defined</td>
-              <td style="text-align:center"><span class="cross">&#10007;</span></td>
-            </tr>
-            <tr class="fragment fade-up">
-              <td><strong>Sub-Agents</strong></td>
-              <td style="text-align:center"><span class="check">&#10003;</span> Parallel agents</td>
-              <td style="text-align:center"><span class="cross">&#10007;</span></td>
-            </tr>
-            <tr class="fragment fade-up">
-              <td><strong>MCP Integration</strong></td>
-              <td style="text-align:center"><span class="check">&#10003;</span> Open protocol</td>
-              <td style="text-align:center"><span class="cross">&#10007;</span></td>
-            </tr>
-            <tr class="fragment fade-up">
-              <td><strong>Agent Teams</strong></td>
-              <td style="text-align:center"><span class="check">&#10003;</span> Multi-agent</td>
-              <td style="text-align:center"><span class="cross">&#10007;</span></td>
-            </tr>
-            <tr class="fragment fade-up">
-              <td><strong>TDD Workflow</strong></td>
-              <td style="text-align:center"><span class="check">&#10003;</span> Plan &rarr; Test &rarr; Code</td>
-              <td style="text-align:center"><span class="partial">~</span> Manual flow</td>
-            </tr>
-            <tr class="fragment fade-up">
-              <td><strong>Deep Context Awareness</strong></td>
-              <td style="text-align:center"><span class="check">&#10003;</span> Full repo</td>
-              <td style="text-align:center"><span class="partial">~</span> Open files</td>
-            </tr>
-            <tr class="fragment fade-up">
-              <td><strong>IDE Independence</strong></td>
-              <td style="text-align:center"><span class="check">&#10003;</span> Terminal-native</td>
-              <td style="text-align:center"><span class="cross">&#10007;</span> VS Code bound</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="comparison-grid">
+          <div class="col">
+            <h3>How It Works</h3>
+            <div class="workflow-diagram" style="flex-direction:column; align-items:flex-start; gap:12px; margin:0.5em 0;">
+              <div class="diagram-box" style="width:100%;">&#128104;&#8205;&#128187; Developer opens file in IDE</div>
+              <div class="diagram-box" style="width:100%;">&#9999; Starts typing &rarr; gets inline suggestions</div>
+              <div class="diagram-box" style="width:100%;">&#128172; Opens chat panel &rarr; asks a question</div>
+              <div class="diagram-box" style="width:100%;">&#128203; Copies answer &rarr; pastes into code</div>
+              <div class="diagram-box" style="width:100%;">&#128260; Repeats for each file, each change</div>
+            </div>
+          </div>
+          <div class="col copilot-col">
+            <h3>Limitations</h3>
+            <ul>
+              <li class="fragment fade-up"><strong>Reactive, not proactive</strong> &mdash; waits for you to type before suggesting</li>
+              <li class="fragment fade-up"><strong>File-scoped context</strong> &mdash; sees the current file, not the full codebase</li>
+              <li class="fragment fade-up"><strong>No execution</strong> &mdash; cannot run commands, tests, or builds</li>
+              <li class="fragment fade-up"><strong>Manual orchestration</strong> &mdash; you decide what to change and where</li>
+              <li class="fragment fade-up"><strong>No memory across sessions</strong> &mdash; every chat starts fresh</li>
+              <li class="fragment fade-up"><strong>IDE-bound</strong> &mdash; tied to VS Code / JetBrains plugin ecosystem</li>
+            </ul>
+          </div>
+        </div>
 
         <aside class="notes">
-          Key talking point: Claude Code operates as a fully autonomous agent that can read, write, and execute code — not just suggest completions. The MCP integration is a major differentiator, allowing Claude to connect to any external tool or data source. Copilot is evolving but still primarily an autocomplete + chat tool.
+          This isn't to say Copilot is bad — it's excellent at what it does. But the workflow is fundamentally manual. You're the orchestrator, the decision-maker, the executor. The AI is a sophisticated autocomplete that waits for your input. The question is: what if the AI could do more?
         </aside>
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 3 — Claude Code Superpowers Overview
+           SLIDE 3 — AI Agents Introduction
            ════════════════════════════════════════════════ -->
       <section>
         <div class="slide-accent-bar"></div>
-        <span class="section-subtitle">What Makes It Different</span>
-        <h2>Claude Code Superpowers</h2>
+        <span class="section-subtitle">The Paradigm Shift</span>
+        <h2>The Rise of AI Agents</h2>
 
-        <div class="capabilities-grid">
+        <p style="font-size:0.8em; color:var(--c-text-light); margin-bottom:0.8em;">
+          AI agents don't just suggest &mdash; they <strong style="color:var(--c-primary);">plan, execute, and iterate</strong> autonomously
+        </p>
+
+        <div class="capabilities-grid" style="grid-template-columns: repeat(4, 1fr);">
           <div class="capability-card fragment fade-up">
-            <span class="card-icon">&#9881;</span>
-            <h3>Skills System</h3>
-            <p>Define reusable, project-specific skills in YAML. Automate commit flows, code reviews, deployments — any repeatable workflow.</p>
+            <span class="card-icon">&#129302;</span>
+            <h3>Claude Code</h3>
+            <p>Anthropic's terminal-native agentic coding assistant with skills, sub-agents, and MCP</p>
           </div>
           <div class="capability-card fragment fade-up">
-            <span class="card-icon">&#128101;</span>
-            <h3>Sub-Agents</h3>
-            <p>Spawn specialized child agents for research, exploration, and parallel task execution. Divide and conquer complex problems.</p>
+            <span class="card-icon">&#128301;</span>
+            <h3>Cursor / Windsurf</h3>
+            <p>IDE-based agents with codebase indexing and multi-file editing capabilities</p>
           </div>
           <div class="capability-card fragment fade-up">
-            <span class="card-icon">&#128268;</span>
-            <h3>MCP Servers</h3>
-            <p>Connect to databases, APIs, and external tools through the Model Context Protocol. Extensible by design.</p>
+            <span class="card-icon">&#128640;</span>
+            <h3>Devin / OpenHands</h3>
+            <p>Cloud-based autonomous agents that work in sandboxed environments with full shell access</p>
           </div>
           <div class="capability-card fragment fade-up">
-            <span class="card-icon">&#129309;</span>
-            <h3>Agent Teams</h3>
-            <p>Coordinate multiple agents working in parallel on different aspects of a task. True team-based development.</p>
+            <span class="card-icon">&#128171;</span>
+            <h3>Aider / Cline</h3>
+            <p>Open-source terminal agents focused on git-aware editing and multi-model support</p>
           </div>
-          <div class="capability-card fragment fade-up">
-            <span class="card-icon">&#128506;</span>
-            <h3>Plan Mode</h3>
-            <p>Explore the codebase and design implementation strategies before writing code. Think first, then execute.</p>
+        </div>
+
+        <div class="claude-bg fragment fade-up" style="margin-top:1em; font-size:0.75em;">
+          <strong>What they share:</strong> Autonomous task execution, multi-file awareness, tool use (shell, browser, APIs), iterative self-correction, and the ability to work on a task while <em>you</em> do something else.
+        </div>
+
+        <aside class="notes">
+          The AI coding landscape has shifted from autocomplete to agents. All of these tools share a common philosophy: instead of suggesting code snippets, they take ownership of tasks. The key differentiator between them is depth of autonomy, tool integration, and how well they handle complex multi-step workflows.
+        </aside>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SLIDE 4 — Introduction to Claude Code
+           ════════════════════════════════════════════════ -->
+      <section>
+        <div class="slide-accent-bar"></div>
+        <span class="section-subtitle">Meet the Agent</span>
+        <h2>Introduction to Claude Code</h2>
+
+        <div class="comparison-grid">
+          <div class="col claude-col">
+            <h3>What It Is</h3>
+            <ul>
+              <li class="fragment fade-up"><strong>Terminal-native</strong> &mdash; runs in your shell, not locked to an IDE</li>
+              <li class="fragment fade-up"><strong>Autonomous agent</strong> &mdash; reads, writes, and executes code on its own</li>
+              <li class="fragment fade-up"><strong>Full repo awareness</strong> &mdash; understands your entire codebase, not just open files</li>
+              <li class="fragment fade-up"><strong>Tool-using</strong> &mdash; runs tests, builds, git commands, shell scripts</li>
+              <li class="fragment fade-up"><strong>Extensible</strong> &mdash; custom skills, MCP servers, sub-agents, agent teams</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Copilot vs Claude Code</h3>
+            <table style="font-size:0.7em; box-shadow:none;">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th style="text-align:center">Copilot</th>
+                  <th style="text-align:center">Claude Code</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="fragment fade-up">
+                  <td>Model</td>
+                  <td style="text-align:center">Reactive</td>
+                  <td style="text-align:center"><strong>Autonomous</strong></td>
+                </tr>
+                <tr class="fragment fade-up">
+                  <td>Scope</td>
+                  <td style="text-align:center">Current file</td>
+                  <td style="text-align:center"><strong>Full repo</strong></td>
+                </tr>
+                <tr class="fragment fade-up">
+                  <td>Execution</td>
+                  <td style="text-align:center"><span class="cross">&#10007;</span></td>
+                  <td style="text-align:center"><span class="check">&#10003;</span> Shell, tests, git</td>
+                </tr>
+                <tr class="fragment fade-up">
+                  <td>Extensibility</td>
+                  <td style="text-align:center">Plugins</td>
+                  <td style="text-align:center"><strong>Skills + MCP</strong></td>
+                </tr>
+                <tr class="fragment fade-up">
+                  <td>Multi-agent</td>
+                  <td style="text-align:center"><span class="cross">&#10007;</span></td>
+                  <td style="text-align:center"><span class="check">&#10003;</span> Sub-agents &amp; teams</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 4 — Skills Deep Dive
+           SLIDE 5 — Skills & Plan Mode
            ════════════════════════════════════════════════ -->
       <section>
         <div class="slide-accent-bar"></div>
-        <span class="section-subtitle">Skills System</span>
-        <h2>Custom Skills Deep Dive</h2>
+        <span class="section-subtitle">Core Features</span>
+        <h2>Skills &amp; Plan Mode</h2>
 
         <div class="comparison-grid">
           <div class="col">
-            <span class="code-label">skill definition &mdash; .claude/skills/review.yml</span>
+            <span class="code-label">Custom Skill &mdash; .claude/skills/review.yml</span>
             <pre><code class="language-yaml">name: code-review
 description: Review PR with project conventions
 trigger: /review
@@ -167,36 +203,41 @@ steps:
       - Security vulnerabilities
       - Performance regressions
       - Missing test coverage
-      - Style guide violations
       Provide actionable feedback.</code></pre>
+            <div class="claude-bg fragment fade-up" style="font-size:0.68em; margin-top:0.8em;">
+              <strong>Skills</strong> = reusable, YAML-defined workflows triggered by <code>/commands</code>. Committed to repo, shared with the team.
+            </div>
           </div>
           <div class="col">
-            <h3>How Skills Work</h3>
+            <h3>Plan Mode</h3>
             <ul>
-              <li class="fragment fade-up"><strong>Declarative</strong> &mdash; Define workflows in YAML, not code</li>
-              <li class="fragment fade-up"><strong>Triggered by command</strong> &mdash; Invoke with <code>/review</code> in the CLI</li>
-              <li class="fragment fade-up"><strong>Multi-step</strong> &mdash; Chain tools, reads, and prompts together</li>
-              <li class="fragment fade-up"><strong>Project-scoped</strong> &mdash; Lives in <code>.claude/skills/</code> alongside your code</li>
-              <li class="fragment fade-up"><strong>Shareable</strong> &mdash; Commit to repo, every team member gets the skill</li>
+              <li class="fragment fade-up"><strong>Think before acting</strong> &mdash; explores codebase, reads files, understands architecture</li>
+              <li class="fragment fade-up"><strong>Produces a plan</strong> &mdash; lists files to change, approach, trade-offs</li>
+              <li class="fragment fade-up"><strong>You approve</strong> &mdash; review the plan before any code is written</li>
+              <li class="fragment fade-up"><strong>Then executes</strong> &mdash; implements the approved plan autonomously</li>
             </ul>
-            <div class="claude-bg fragment fade-up" style="margin-top:1em; font-size:0.75em;">
-              <strong>Pro tip:</strong> Combine with <code>CLAUDE.md</code> for context-aware automation that respects your team's conventions.
-            </div>
+            <span class="code-label" style="margin-top:1em;">Activating Plan Mode</span>
+            <pre><code class="language-bash"># In Claude Code, just ask:
+> Plan how to add JWT authentication
+  to our Express API
+
+# Or use the keyboard shortcut:
+# Shift+Tab toggles plan mode</code></pre>
           </div>
         </div>
 
         <aside class="notes">
-          Skills are one of the most powerful differentiators. They let teams codify their workflows. Example: a /deploy skill that runs tests, builds, and deploys — or a /migrate skill that generates database migrations following your ORM conventions. Copilot has no equivalent to this.
+          Skills and Plan Mode are complementary. Skills codify repeatable workflows — commit, review, deploy. Plan Mode is for novel tasks where you want Claude to think before acting. Together they give you both automation and control. The key insight: Plan Mode prevents Claude from making changes you haven't approved.
         </aside>
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 5 — Sub-Agents & Background Tasks
+           SLIDE 6 — Sub-Agents
            ════════════════════════════════════════════════ -->
       <section>
         <div class="slide-accent-bar"></div>
         <span class="section-subtitle">Parallel Execution</span>
-        <h2>Sub-Agents &amp; Background Tasks</h2>
+        <h2>Sub-Agents</h2>
 
         <div class="agent-diagram fragment fade-up">
           <div class="agent-hub">&#129302; Claude Code &mdash; Orchestrator</div>
@@ -205,7 +246,7 @@ steps:
             <div class="agent-spoke">
               <span class="spoke-icon">&#128269;</span>
               <h4>Explore Agent</h4>
-              <p>Codebase search &amp; analysis</p>
+              <p>Fast codebase search &amp; analysis</p>
             </div>
             <div class="agent-spoke">
               <span class="spoke-icon">&#128506;</span>
@@ -220,35 +261,35 @@ steps:
             <div class="agent-spoke">
               <span class="spoke-icon">&#128736;</span>
               <h4>General Purpose</h4>
-              <p>Multi-step task handling</p>
+              <p>Complex multi-step tasks</p>
             </div>
           </div>
         </div>
 
         <div class="comparison-grid fragment fade-up" style="margin-top:1em;">
           <div class="col claude-col">
-            <h3><span class="claude-highlight">&#9889; Key Advantage</span></h3>
+            <h3><span class="claude-highlight">&#9889; How It Works</span></h3>
             <ul>
+              <li>Claude spawns <strong>child agents</strong> for specific subtasks</li>
+              <li>Each agent has its own <strong>isolated context window</strong></li>
               <li>Agents run <strong>in parallel</strong> in the background</li>
-              <li>Main conversation stays responsive</li>
-              <li>Each agent has its own <strong>isolated context</strong></li>
-              <li>Results merge back seamlessly</li>
+              <li>Results merge back into the main conversation</li>
             </ul>
           </div>
           <div class="col">
-            <h3>Use Cases</h3>
+            <h3>Why It Matters</h3>
             <ul>
-              <li>Research across large codebases</li>
-              <li>Run tests while continuing to code</li>
+              <li>Research a 100k-line codebase without polluting main context</li>
+              <li>Run tests in background while continuing to code</li>
               <li>Explore multiple approaches simultaneously</li>
-              <li>Background linting and validation</li>
+              <li>Main conversation stays <strong>fast and responsive</strong></li>
             </ul>
           </div>
         </div>
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 6 — MCP Servers
+           SLIDE 7 — MCP Servers
            ════════════════════════════════════════════════ -->
       <section>
         <div class="slide-accent-bar"></div>
@@ -257,24 +298,30 @@ steps:
 
         <div class="comparison-grid">
           <div class="col">
-            <h3>Integration Architecture</h3>
-            <div class="agent-diagram" style="margin:0.5em 0;">
-              <div class="agent-hub" style="font-size:0.75em; padding:14px 32px;">&#129302; Claude Code</div>
+            <h3>What Is MCP?</h3>
+            <p style="font-size:0.75em; color:var(--c-text-light);">
+              <strong>Model Context Protocol</strong> &mdash; an open standard for connecting AI agents to external tools. Think of it as <strong style="color:var(--c-primary);">USB for AI</strong>.
+            </p>
+            <div class="agent-diagram" style="margin:0.8em 0;">
+              <div class="agent-hub" style="font-size:0.7em; padding:12px 28px;">&#129302; Any MCP-Compatible Agent</div>
               <div class="connector-down"></div>
-              <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-                <div class="diagram-box accent">&#128451; Database</div>
-                <div class="diagram-box accent">&#127760; APIs</div>
-                <div class="diagram-box accent">&#128196; Docs</div>
-                <div class="diagram-box accent">&#128295; CI/CD</div>
-                <div class="diagram-box accent">&#128202; Analytics</div>
+              <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+                <div class="diagram-box accent">&#128451; PostgreSQL</div>
+                <div class="diagram-box accent">&#127760; GitHub API</div>
+                <div class="diagram-box accent">&#128196; Confluence</div>
+                <div class="diagram-box accent">&#128295; Jenkins</div>
+                <div class="diagram-box accent">&#128202; Grafana</div>
+                <div class="diagram-box accent">&#128270; Elasticsearch</div>
               </div>
             </div>
-            <p style="font-size:0.7em; color:var(--c-text-light); margin-top:1em;">
-              MCP provides a <strong>standardized protocol</strong> for connecting AI agents to any external tool or data source &mdash; like USB for AI.
-            </p>
+            <ul style="font-size:0.7em; margin-top:0.8em;">
+              <li class="fragment fade-up"><strong>Not proprietary</strong> &mdash; works with any MCP-compatible agent</li>
+              <li class="fragment fade-up"><strong>100+ community servers</strong> available today</li>
+              <li class="fragment fade-up"><strong>Build your own</strong> &mdash; simple JSON-RPC protocol</li>
+            </ul>
           </div>
           <div class="col">
-            <span class="code-label">MCP configuration &mdash; .claude/mcp.json</span>
+            <span class="code-label">Configuration &mdash; .claude/mcp.json</span>
             <pre><code class="language-json">{
   "mcpServers": {
     "postgres": {
@@ -287,94 +334,163 @@ steps:
     "github": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": {
-        "GITHUB_TOKEN": "ghp_..."
-      }
-    },
-    "filesystem": {
-      "command": "npx",
-      "args": [
-        "-y", "@modelcontextprotocol/server-filesystem",
-        "/path/to/allowed/dir"
-      ]
+      "env": { "GITHUB_TOKEN": "ghp_..." }
     }
   }
 }</code></pre>
+            <span class="code-label" style="margin-top:0.8em;">Usage in Claude Code</span>
+            <pre><code class="language-bash"># Claude can now directly query your DB:
+> Show me all users who signed up
+  in the last 7 days
+
+# Or interact with GitHub:
+> Create a PR from my current branch
+  with a summary of all changes</code></pre>
           </div>
         </div>
 
         <aside class="notes">
-          MCP (Model Context Protocol) is Anthropic's open standard for connecting AI tools to external systems. Think of it as a plugin system — but standardized across all MCP-compatible agents. Key point: this is NOT proprietary. Any tool can implement an MCP server, and any agent can connect to it. Currently 50+ community servers available for databases, APIs, file systems, and more.
+          MCP is Anthropic's open standard, but it's designed to work with any agent. Think of it as a plugin system that's universal. Key examples: connect to your production database to run read-only queries, integrate with your CI/CD to check build status, pull documentation from Confluence. The protocol is simple JSON-RPC — you can build a custom MCP server in an afternoon.
         </aside>
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 7 — Agent Teams
+           SLIDE 8 — Agent Teams & Orchestrators
            ════════════════════════════════════════════════ -->
       <section>
         <div class="slide-accent-bar"></div>
-        <span class="section-subtitle">Coordination</span>
-        <h2>Agent Teams</h2>
+        <span class="section-subtitle">Multi-Agent Coordination</span>
+        <h2>Agent Teams &amp; Orchestrators</h2>
 
         <div class="workflow-diagram">
-          <div class="workflow-step fragment fade-up">
+          <div class="workflow-step fragment fade-up" style="padding:20px 18px;">
             <span class="step-number">Lead</span>
             <span class="step-icon">&#128081;</span>
             <h4>Orchestrator</h4>
-            <p>Decomposes task &amp; assigns work</p>
+            <p>Plans &amp; delegates tasks</p>
           </div>
           <span class="workflow-arrow fragment fade-up">&rarr;</span>
-          <div class="workflow-step fragment fade-up">
-            <span class="step-number">Agent A</span>
+          <div class="workflow-step fragment fade-up" style="padding:20px 18px;">
+            <span class="step-number">Worker A</span>
             <span class="step-icon">&#128187;</span>
             <h4>Frontend</h4>
-            <p>UI components &amp; styling</p>
+            <p>UI &amp; components</p>
           </div>
           <span class="workflow-arrow fragment fade-up">&rarr;</span>
-          <div class="workflow-step fragment fade-up">
-            <span class="step-number">Agent B</span>
+          <div class="workflow-step fragment fade-up" style="padding:20px 18px;">
+            <span class="step-number">Worker B</span>
             <span class="step-icon">&#9881;</span>
             <h4>Backend</h4>
-            <p>API endpoints &amp; logic</p>
+            <p>API &amp; logic</p>
           </div>
           <span class="workflow-arrow fragment fade-up">&rarr;</span>
-          <div class="workflow-step fragment fade-up">
-            <span class="step-number">Agent C</span>
+          <div class="workflow-step fragment fade-up" style="padding:20px 18px;">
+            <span class="step-number">Worker C</span>
             <span class="step-icon">&#128202;</span>
             <h4>Testing</h4>
-            <p>Test suite &amp; validation</p>
+            <p>Tests &amp; validation</p>
           </div>
         </div>
 
-        <div class="comparison-grid fragment fade-up" style="margin-top:1.5em;">
-          <div class="col claude-col">
+        <div class="comparison-grid fragment fade-up" style="margin-top:1em; gap:24px;">
+          <div class="col claude-col" style="padding:24px;">
             <h3>How It Works</h3>
             <ul>
-              <li>Lead agent <strong>plans and delegates</strong> subtasks</li>
-              <li>Worker agents operate in <strong>parallel worktrees</strong></li>
-              <li>Each agent has its own <strong>context &amp; tools</strong></li>
-              <li>Results are <strong>merged</strong> and reviewed by the lead</li>
+              <li>Lead agent <strong>decomposes</strong> the task into subtasks</li>
+              <li>Workers operate in <strong>parallel git worktrees</strong></li>
+              <li>Each worker has its own <strong>context &amp; tools</strong></li>
+              <li>Lead agent <strong>merges</strong> results and resolves conflicts</li>
             </ul>
           </div>
-          <div class="col">
+          <div class="col" style="padding:24px;">
             <h3>When to Use</h3>
             <ul>
-              <li>Full-stack feature implementation</li>
-              <li>Large refactoring across many files</li>
-              <li>Parallel test writing + implementation</li>
-              <li>Multi-service changes</li>
+              <li>Full-stack features touching many files</li>
+              <li>Large-scale refactoring across modules</li>
+              <li>Parallel implementation + test writing</li>
+              <li>Multi-service / monorepo changes</li>
             </ul>
           </div>
         </div>
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 8 — TDD with Superpowers
+           SLIDE 9 — C++ Refactoring Examples
+           ════════════════════════════════════════════════ -->
+      <section>
+        <div class="slide-accent-bar"></div>
+        <span class="section-subtitle">Real-World C++</span>
+        <h2>C++ Refactoring with Claude Code</h2>
+
+        <div class="comparison-grid">
+          <div class="col">
+            <span class="code-label">Before &mdash; Legacy C++ code</span>
+            <pre><code class="language-cpp">// Raw pointers, manual memory, C-style casts
+void processData(DataManager* mgr) {
+    Record* records = mgr->getRecords();
+    int count = mgr->getCount();
+    for (int i = 0; i < count; i++) {
+        Record* r = &records[i];
+        void* raw = (void*)r->payload;
+        char* buf = new char[r->size];
+        memcpy(buf, raw, r->size);
+        if (validate(buf, r->size))
+            mgr->commit((Record*)buf);
+        delete[] buf;
+    }
+}</code></pre>
+          </div>
+          <div class="col">
+            <span class="code-label">After &mdash; Modern C++17</span>
+            <pre><code class="language-cpp">// Smart pointers, ranges, type-safe casts
+void processData(DataManager&amp; mgr) {
+    for (auto&amp; record : mgr.records()) {
+        auto payload =
+            std::span{record.payload()};
+        auto buf =
+            std::make_unique&lt;std::byte[]&gt;(
+                payload.size());
+        std::ranges::copy(payload,
+                          buf.get());
+        if (validate({buf.get(),
+                      payload.size()}))
+            mgr.commit(std::move(buf));
+    }
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="tips-grid fragment fade-up" style="margin-top:0.8em;">
+          <div class="tip-card" style="padding:18px 22px;">
+            <span class="tip-number">Task 1</span>
+            <h4>Modernize Raw Pointers</h4>
+            <p>Replace <code>new/delete</code> with <code>unique_ptr</code>, <code>shared_ptr</code>. Convert C-style casts to <code>static_cast</code>/<code>reinterpret_cast</code>.</p>
+          </div>
+          <div class="tip-card" style="padding:18px 22px;">
+            <span class="tip-number">Task 2</span>
+            <h4>Apply Modern Idioms</h4>
+            <p>Range-based loops, <code>std::span</code>, <code>std::optional</code>, structured bindings, <code>[[nodiscard]]</code>.</p>
+          </div>
+          <div class="tip-card" style="padding:18px 22px;">
+            <span class="tip-number">Task 3</span>
+            <h4>Extract &amp; Decouple</h4>
+            <p>Break god-classes into focused components. Introduce interfaces. Apply SOLID across 50+ files.</p>
+          </div>
+          <div class="tip-card" style="padding:18px 22px;">
+            <span class="tip-number">Task 4</span>
+            <h4>Migrate Build System</h4>
+            <p>Convert Makefiles to CMake. Update include paths, link targets, compiler flags across the project.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SLIDE 10 — TDD with Claude Code
            ════════════════════════════════════════════════ -->
       <section>
         <div class="slide-accent-bar"></div>
         <span class="section-subtitle">Test-Driven Development</span>
-        <h2>TDD with Superpowers</h2>
+        <h2>TDD with Claude Code</h2>
 
         <div class="workflow-diagram" style="margin:0.8em 0;">
           <div class="workflow-step active fragment fade-up" style="padding:20px 18px;">
@@ -407,234 +523,108 @@ steps:
         </div>
 
         <div class="claude-bg fragment fade-up" style="margin-top:0.6em; font-size:0.72em; padding:12px 20px;">
-          <strong>Claude Code advantage:</strong> The agent follows this loop autonomously &mdash; explore, test, implement, and validate in a single session without manual intervention.
+          <strong>Key advantage:</strong> Claude Code follows this loop autonomously &mdash; it explores, writes tests, implements, runs the suite, and self-corrects failures without manual intervention.
         </div>
 
         <div class="comparison-grid fragment fade-up" style="margin-top:0.6em; gap:24px;">
-          <div class="col claude-col" style="padding:24px;">
-            <h3><span class="claude-highlight">Claude Code</span></h3>
+          <div class="col" style="padding:24px;">
+            <h3>What Claude Code Does</h3>
             <ul>
-              <li>Autonomous Plan &rarr; Test &rarr; Code loop</li>
-              <li>Runs tests and <strong>self-corrects</strong></li>
-              <li>Understands full project test conventions</li>
+              <li>Reads <code>CLAUDE.md</code> to learn your test framework &amp; conventions</li>
+              <li>Generates comprehensive edge-case tests</li>
+              <li>Runs the suite, reads failures, fixes code</li>
+              <li>Repeats until <strong>all tests pass</strong></li>
             </ul>
           </div>
-          <div class="col copilot-col" style="padding:24px;">
-            <h3><span class="copilot-highlight">Copilot</span></h3>
+          <div class="col" style="padding:24px;">
+            <h3>Best Practices</h3>
             <ul>
-              <li>Suggests test code inline</li>
-              <li>Manual test execution required</li>
-              <li>No iterative fix loop</li>
+              <li>Document test commands in <code>CLAUDE.md</code></li>
+              <li>Ask for tests <strong>before</strong> implementation</li>
+              <li>Review generated tests for correctness</li>
+              <li>Use sub-agents for parallel test suites</li>
             </ul>
           </div>
         </div>
-
-        <aside class="notes">
-          This is a powerful demo opportunity. Show how Claude Code can: 1) enter plan mode to understand the codebase, 2) write failing tests first, 3) implement the feature, 4) run tests and automatically fix any failures. The key differentiator is the autonomous loop — Claude doesn't just suggest code, it validates it.
-        </aside>
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 9 — Real-World Comparison
+           SLIDE 11 — Mindset for AI Development
            ════════════════════════════════════════════════ -->
       <section>
         <div class="slide-accent-bar"></div>
-        <span class="section-subtitle">Real-World Scenario</span>
-        <h2>Complex Refactoring: A Side-by-Side</h2>
-        <p style="font-size:0.75em; color:var(--c-text-light); margin-bottom:0.8em;">
-          <strong>Task:</strong> Migrate authentication from session-based to JWT across a full-stack application
+        <span class="section-subtitle">Working With AI</span>
+        <h2>The Right Mindset</h2>
+
+        <p style="font-size:0.85em; color:var(--c-text-light); text-align:center; margin-bottom:1em;">
+          Think of Claude Code as mentoring a <strong style="color:var(--c-primary);">chaotic but talented colleague</strong>
         </p>
 
         <div class="comparison-grid">
-          <div class="col claude-col fragment fade-up">
-            <h3>&#129302; <span class="claude-highlight">Claude Code</span></h3>
+          <div class="col claude-col">
+            <h3>&#9989; What Works</h3>
             <ul>
-              <li><strong>Explores</strong> entire auth codebase with sub-agents</li>
-              <li><strong>Plans</strong> migration strategy in plan mode</li>
-              <li>Creates JWT middleware, updates routes, modifies frontend &mdash; <strong>in parallel</strong></li>
-              <li>Writes migration tests <strong>before</strong> changing code</li>
-              <li>Runs test suite, fixes failures <strong>autonomously</strong></li>
-              <li>Updates <code>.env.example</code> and docs</li>
+              <li class="fragment fade-up"><strong>Clear instructions</strong> &mdash; write a <code>CLAUDE.md</code> like an onboarding doc</li>
+              <li class="fragment fade-up"><strong>Review its work</strong> &mdash; it's brilliant but makes surprising mistakes</li>
+              <li class="fragment fade-up"><strong>Delegate and context-switch</strong> &mdash; give it a task, go work on something else</li>
+              <li class="fragment fade-up"><strong>Use plan mode</strong> &mdash; let it think before acting on complex tasks</li>
+              <li class="fragment fade-up"><strong>Play to its strengths</strong> &mdash; boilerplate, refactoring, tests, exploration</li>
             </ul>
-            <div class="claude-bg" style="margin-top:1em; font-size:0.8em;">
-              <strong>Result:</strong> Complete migration in ~15 minutes, fully tested
-            </div>
           </div>
-          <div class="col copilot-col fragment fade-up">
-            <h3>&#128421; <span class="copilot-highlight">Copilot</span></h3>
+          <div class="col copilot-col">
+            <h3>&#10060; What Doesn't</h3>
             <ul>
-              <li>Suggests JWT code <strong>per-file</strong> as you edit</li>
-              <li>You manually identify all files to change</li>
-              <li>No cross-file awareness of the migration</li>
-              <li>Test suggestions are <strong>file-scoped</strong></li>
-              <li>You run tests manually, fix manually</li>
-              <li>Documentation updates are your responsibility</li>
+              <li class="fragment fade-up"><strong>Watching the terminal</strong> &mdash; defeats the whole purpose of autonomy</li>
+              <li class="fragment fade-up"><strong>No guardrails</strong> &mdash; without <code>CLAUDE.md</code> it guesses your conventions</li>
+              <li class="fragment fade-up"><strong>Blind trust</strong> &mdash; always review before committing</li>
+              <li class="fragment fade-up"><strong>One-shot prompts</strong> &mdash; iterate, provide feedback, guide it</li>
+              <li class="fragment fade-up"><strong>Expert-level tasks</strong> &mdash; if you know the domain deeply, you're probably faster</li>
             </ul>
-            <div class="copilot-bg" style="margin-top:1em; font-size:0.8em;">
-              <strong>Result:</strong> Hours of manual work with inline suggestions
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ════════════════════════════════════════════════
-           SLIDE 10 — Best Practices
-           ════════════════════════════════════════════════ -->
-      <section>
-        <div class="slide-accent-bar"></div>
-        <span class="section-subtitle">Level Up</span>
-        <h2>8 Best Practices</h2>
-
-        <div class="tips-grid">
-          <div class="tip-card fragment fade-up">
-            <span class="tip-number">01</span>
-            <h4>Start with Plan Mode</h4>
-            <p>Always explore before implementing. Let Claude understand your codebase first.</p>
-          </div>
-          <div class="tip-card fragment fade-up">
-            <span class="tip-number">02</span>
-            <h4>Write a CLAUDE.md</h4>
-            <p>Document your project conventions, tech stack, and preferences for context-aware assistance.</p>
-          </div>
-          <div class="tip-card fragment fade-up">
-            <span class="tip-number">03</span>
-            <h4>Leverage Custom Skills</h4>
-            <p>Codify your team's workflows as skills. Share them via version control.</p>
-          </div>
-          <div class="tip-card fragment fade-up">
-            <span class="tip-number">04</span>
-            <h4>Use Sub-Agents for Research</h4>
-            <p>Spawn explore agents for large codebase searches instead of manual navigation.</p>
-          </div>
-          <div class="tip-card fragment fade-up">
-            <span class="tip-number">05</span>
-            <h4>TDD by Default</h4>
-            <p>Ask Claude to write tests first. The autonomous validate loop catches bugs early.</p>
-          </div>
-          <div class="tip-card fragment fade-up">
-            <span class="tip-number">06</span>
-            <h4>Connect MCP Servers</h4>
-            <p>Integrate your database, CI/CD, and APIs for a truly connected development environment.</p>
-          </div>
-          <div class="tip-card fragment fade-up">
-            <span class="tip-number">07</span>
-            <h4>Review Before Committing</h4>
-            <p>Use <code>/review</code> skills to catch issues before they reach the PR stage.</p>
-          </div>
-          <div class="tip-card fragment fade-up">
-            <span class="tip-number">08</span>
-            <h4>Iterate, Don't Restart</h4>
-            <p>Claude maintains context across turns. Build on previous work instead of starting over.</p>
           </div>
         </div>
 
         <aside class="notes">
-          These are battle-tested practices from teams using Claude Code in production. The CLAUDE.md file is especially important — it's like giving Claude a team onboarding document. Emphasize that skills are version-controlled and shareable, making the whole team more productive.
+          The mentoring analogy is powerful: imagine a junior developer who is incredibly fast, knows every language, never gets tired — but sometimes makes bizarre decisions and doesn't know your team's conventions. You wouldn't let them push to main without review, but you'd give them tasks all day long. That's Claude Code.
         </aside>
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 11 — Getting Started
-           ════════════════════════════════════════════════ -->
-      <section>
-        <div class="slide-accent-bar"></div>
-        <span class="section-subtitle">Your First Skill</span>
-        <h2>Getting Started</h2>
-
-        <div class="comparison-grid">
-          <div class="col">
-            <h3>Step 1 &mdash; Install Claude Code</h3>
-            <pre><code class="language-bash"># Install globally via npm
-npm install -g @anthropic-ai/claude-code
-
-# Navigate to your project
-cd my-project
-
-# Start Claude Code
-claude</code></pre>
-
-            <h3 style="margin-top:1em;">Step 2 &mdash; Create Your First Skill</h3>
-            <pre><code class="language-bash"># Create the skills directory
-mkdir -p .claude/skills
-
-# Create a commit skill
-cat > .claude/skills/commit.yml << 'EOF'
-name: smart-commit
-description: Commit with conventional message
-trigger: /commit
-steps:
-  - tool: Bash
-    command: git diff --staged
-  - prompt: |
-      Generate a conventional commit message
-      for the staged changes. Use the format:
-      type(scope): description
-EOF</code></pre>
-          </div>
-          <div class="col">
-            <h3>Step 3 &mdash; Use the Skill</h3>
-            <pre><code class="language-bash"># Stage your changes
-git add .
-
-# Invoke the skill in Claude Code
-> /commit
-
-# Claude reads the diff, generates:
-# feat(auth): add JWT token refresh logic
-#
-# - Add refresh token rotation
-# - Update middleware to check expiry
-# - Add tests for token lifecycle</code></pre>
-
-            <h3 style="margin-top:1em;">Step 4 &mdash; Add CLAUDE.md</h3>
-            <pre><code class="language-markdown"># CLAUDE.md
-
-## Project: My App
-- Stack: React + Node.js + PostgreSQL
-- Tests: Jest + React Testing Library
-- Style: Airbnb ESLint, Prettier
-- Commits: Conventional Commits format
-- Always write tests before implementation
-- Use TypeScript strict mode</code></pre>
-          </div>
-        </div>
-      </section>
-
-      <!-- ════════════════════════════════════════════════
-           SLIDE 12 — Conclusion & CTA
+           SLIDE 12 — The Future Is Agentic
            ════════════════════════════════════════════════ -->
       <section class="center-slide">
         <div class="slide-accent-bar"></div>
-        <span class="section-subtitle">Wrapping Up</span>
+        <span class="section-subtitle">Looking Ahead</span>
         <h2>The Future Is Agentic</h2>
 
-        <p style="font-size:0.85em; max-width:1200px; margin:0 auto 1.5em; text-align:center; color:var(--c-text-light);">
-          Claude Code isn't just a better autocomplete &mdash; it's a <strong style="color:var(--c-primary)">fundamentally different paradigm</strong>
-          for how developers interact with AI. From custom skills to agent teams, it puts
-          <strong style="color:var(--c-primary)">autonomous engineering</strong> within reach.
+        <p style="font-size:0.85em; max-width:1200px; margin:0 auto 1.2em; text-align:center; color:var(--c-text-light);">
+          We are witnessing a <strong style="color:var(--c-primary)">fundamental shift</strong> in how software gets built.
+          The question is no longer <em>"will AI write code?"</em> but <em>"how do we work alongside agents effectively?"</em>
         </p>
 
-        <div class="resource-grid fragment fade-up">
-          <div class="resource-card">
-            <span class="resource-icon">&#128214;</span>
-            <h4>Documentation</h4>
-            <p>docs.anthropic.com/claude-code</p>
+        <div class="capabilities-grid fragment fade-up" style="grid-template-columns: repeat(3, 1fr); margin-top:0.8em;">
+          <div class="capability-card">
+            <span class="card-icon">&#128640;</span>
+            <h3>Agents Get Smarter</h3>
+            <p>Better reasoning, longer context, fewer hallucinations. Each generation closes the gap with human developers.</p>
           </div>
-          <div class="resource-card">
-            <span class="resource-icon">&#128187;</span>
-            <h4>Install Now</h4>
-            <p>npm i -g @anthropic-ai/claude-code</p>
+          <div class="capability-card">
+            <span class="card-icon">&#129309;</span>
+            <h3>Teams of Agents</h3>
+            <p>Multi-agent systems that plan, implement, test, and review &mdash; an autonomous software team on demand.</p>
           </div>
-          <div class="resource-card">
-            <span class="resource-icon">&#127758;</span>
-            <h4>MCP Servers</h4>
-            <p>github.com/modelcontextprotocol</p>
+          <div class="capability-card">
+            <span class="card-icon">&#127760;</span>
+            <h3>Universal Tool Access</h3>
+            <p>Open protocols like MCP connect agents to any system. The walled-garden era of AI tools is ending.</p>
           </div>
         </div>
 
-        <div class="cta-block fragment fade-up">
-          <h3>Questions?</h3>
-          <p>Let's discuss how agentic AI can transform your development workflow.</p>
+        <div class="cta-block fragment fade-up" style="margin-top:1.2em;">
+          <h3>The developer role is evolving</h3>
+          <p style="max-width:900px; margin:0 auto;">
+            From writing every line of code to <strong>architecting, reviewing, and orchestrating</strong> autonomous agents.
+            The best developers will be those who learn to delegate effectively.
+          </p>
         </div>
       </section>
 
