@@ -24,15 +24,19 @@
            ════════════════════════════════════════════════ -->
       <section class="title-slide">
         <span class="title-accent">Advanced Development Practices</span>
-        <h1>Claude Code <em>vs</em> Copilot</h1>
+        <h1>Vibe Clauding</h1>
         <p class="subtitle">
           How agentic AI is redefining the developer workflow &mdash;<br>
           from autocomplete to autonomous engineering
         </p>
-        <p class="title-meta">2025 &middot; Slide Deck &middot; Press <kbd>S</kbd> for speaker notes</p>
-        <p style="font-size:0.5em; color:var(--c-mid-gray); margin-top:1.5em;">
-          Inspired by <a href="https://yermilov.github.io/pragmatic-vibe-clauding-ua/" target="_blank" style="color:var(--c-claude);">Pragmatic Vibe Clauding</a>
-          by <strong style="color:var(--c-text-light);">Yarik Yermilov</strong>
+        <p style="font-size:0.7em; color:var(--c-text); margin-top:1em; font-weight:500;">Viktor Klochkov</p>
+        <p class="title-meta">2025 &middot; Press <kbd>S</kbd> for speaker notes</p>
+        <p style="font-size:0.65em; color:var(--c-text-light); margin-top:1.5em;">
+          Inspired by
+          <a href="https://yermilov.github.io/pragmatic-vibe-clauding-ua/" target="_blank" style="color:var(--c-claude); font-weight:600;">
+            Pragmatic Vibe Clauding</a>
+          by <strong style="color:var(--c-primary);">Yarik Yermilov</strong>,
+          Principal Software Engineer @ Superhuman/Grammarly
         </p>
       </section>
 
@@ -81,34 +85,34 @@
         <span class="section-subtitle">The Paradigm Shift</span>
         <h2>The Rise of AI Agents</h2>
 
-        <p style="font-size:0.8em; color:var(--c-text-light); margin-bottom:0.8em;">
+        <p style="font-size:0.75em; color:var(--c-text-light); margin-bottom:0.6em;">
           AI agents don't just suggest &mdash; they <strong style="color:var(--c-primary);">plan, execute, and iterate</strong> autonomously
         </p>
 
-        <div class="capabilities-grid" style="grid-template-columns: repeat(4, 1fr);">
-          <div class="capability-card fragment fade-up">
+        <div class="capabilities-grid" style="grid-template-columns: repeat(4, 1fr); gap:20px;">
+          <div class="capability-card fragment fade-up" style="padding:24px 20px;">
             <span class="card-icon">&#129302;</span>
             <h3>Claude Code</h3>
-            <p>Anthropic's terminal-native agentic coding assistant with skills, sub-agents, and MCP</p>
+            <p>Terminal-native agent with skills, sub-agents, and MCP integration</p>
           </div>
-          <div class="capability-card fragment fade-up">
+          <div class="capability-card fragment fade-up" style="padding:24px 20px;">
             <span class="card-icon">&#128301;</span>
             <h3>Cursor / Windsurf</h3>
-            <p>IDE-based agents with codebase indexing and multi-file editing capabilities</p>
+            <p>IDE-based agents with codebase indexing and multi-file editing</p>
           </div>
-          <div class="capability-card fragment fade-up">
+          <div class="capability-card fragment fade-up" style="padding:24px 20px;">
             <span class="card-icon">&#128640;</span>
             <h3>Devin / OpenHands</h3>
-            <p>Cloud-based autonomous agents that work in sandboxed environments with full shell access</p>
+            <p>Cloud-based autonomous agents in sandboxed environments</p>
           </div>
-          <div class="capability-card fragment fade-up">
+          <div class="capability-card fragment fade-up" style="padding:24px 20px;">
             <span class="card-icon">&#128171;</span>
             <h3>Aider / Cline</h3>
-            <p>Open-source terminal agents focused on git-aware editing and multi-model support</p>
+            <p>Open-source terminal agents with git-aware editing</p>
           </div>
         </div>
 
-        <div class="claude-bg fragment fade-up" style="margin-top:1em; font-size:0.75em;">
+        <div class="claude-bg fragment fade-up" style="margin-top:0.8em; font-size:0.7em; padding:12px 20px;">
           <strong>What they share:</strong> Autonomous task execution, multi-file awareness, tool use (shell, browser, APIs), iterative self-correction, and the ability to work on a task while <em>you</em> do something else.
         </div>
 
@@ -415,7 +419,7 @@ steps:
       </section>
 
       <!-- ════════════════════════════════════════════════
-           SLIDE 9 — C++ Refactoring Examples
+           SLIDE 9a — C++ Refactoring: Before & After
            ════════════════════════════════════════════════ -->
       <section>
         <div class="slide-accent-bar"></div>
@@ -423,7 +427,7 @@ steps:
         <h2>C++ Refactoring with Claude Code</h2>
 
         <div class="comparison-grid">
-          <div class="col">
+          <div class="col copilot-col">
             <span class="code-label">Before &mdash; Legacy C++ code</span>
             <pre><code class="language-cpp">// Raw pointers, manual memory, C-style casts
 void processData(DataManager* mgr) {
@@ -440,7 +444,7 @@ void processData(DataManager* mgr) {
     }
 }</code></pre>
           </div>
-          <div class="col">
+          <div class="col claude-col">
             <span class="code-label">After &mdash; Modern C++17</span>
             <pre><code class="language-cpp">// Smart pointers, ranges, type-safe casts
 void processData(DataManager&amp; mgr) {
@@ -460,26 +464,57 @@ void processData(DataManager&amp; mgr) {
           </div>
         </div>
 
-        <div class="tips-grid fragment fade-up" style="margin-top:0.8em;">
-          <div class="tip-card" style="padding:18px 22px;">
+        <div class="claude-bg fragment fade-up" style="margin-top:1em; font-size:0.72em; padding:12px 20px;">
+          <strong>How it works:</strong> Claude Code explores the full codebase in plan mode, identifies all affected files, applies modernization patterns consistently, then runs your test suite to verify nothing broke &mdash; across hundreds of files in a single session.
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SLIDE 9b — C++ Refactoring Tasks
+           ════════════════════════════════════════════════ -->
+      <section>
+        <div class="slide-accent-bar"></div>
+        <span class="section-subtitle">Real-World C++</span>
+        <h2>Refactoring Tasks for Claude Code</h2>
+
+        <div class="tips-grid">
+          <div class="tip-card fragment fade-up">
             <span class="tip-number">Task 1</span>
             <h4>Modernize Raw Pointers</h4>
-            <p>Replace <code>new/delete</code> with <code>unique_ptr</code>, <code>shared_ptr</code>. Convert C-style casts to <code>static_cast</code>/<code>reinterpret_cast</code>.</p>
+            <p>Replace <code>new/delete</code> with <code>unique_ptr</code>, <code>shared_ptr</code>. Convert C-style casts to <code>static_cast</code> / <code>reinterpret_cast</code>. Fix ownership semantics across call chains.</p>
           </div>
-          <div class="tip-card" style="padding:18px 22px;">
+          <div class="tip-card fragment fade-up">
             <span class="tip-number">Task 2</span>
             <h4>Apply Modern Idioms</h4>
-            <p>Range-based loops, <code>std::span</code>, <code>std::optional</code>, structured bindings, <code>[[nodiscard]]</code>.</p>
+            <p>Range-based loops, <code>std::span</code>, <code>std::optional</code>, structured bindings, <code>[[nodiscard]]</code>, <code>constexpr</code> where applicable.</p>
           </div>
-          <div class="tip-card" style="padding:18px 22px;">
+          <div class="tip-card fragment fade-up">
             <span class="tip-number">Task 3</span>
             <h4>Extract &amp; Decouple</h4>
-            <p>Break god-classes into focused components. Introduce interfaces. Apply SOLID across 50+ files.</p>
+            <p>Break god-classes into focused components. Introduce interfaces for testability. Apply SOLID principles across 50+ files.</p>
           </div>
-          <div class="tip-card" style="padding:18px 22px;">
+          <div class="tip-card fragment fade-up">
             <span class="tip-number">Task 4</span>
             <h4>Migrate Build System</h4>
-            <p>Convert Makefiles to CMake. Update include paths, link targets, compiler flags across the project.</p>
+            <p>Convert Makefiles to CMake. Update include paths, link targets, and compiler flags across the entire project.</p>
+          </div>
+        </div>
+
+        <div class="comparison-grid fragment fade-up" style="margin-top:1em; gap:24px;">
+          <div class="col claude-col" style="padding:24px;">
+            <h3>Why Agents Excel Here</h3>
+            <ul>
+              <li>Repetitive patterns across <strong>hundreds of files</strong></li>
+              <li>Needs <strong>full-repo context</strong> to track ownership chains</li>
+              <li>Agent can <strong>compile &amp; test</strong> after each change</li>
+            </ul>
+          </div>
+          <div class="col" style="padding:24px;">
+            <h3>Prompt Example</h3>
+            <pre style="margin:0;"><code class="language-bash" style="font-size:0.85em; padding:16px;">Modernize all raw pointer usage in
+src/core/ to smart pointers.
+Run cmake --build && ctest after
+each file to verify correctness.</code></pre>
           </div>
         </div>
       </section>
@@ -622,7 +657,10 @@ void processData(DataManager&amp; mgr) {
         <div class="cta-block fragment fade-up" style="margin-top:1.2em;">
           <h3>The developer role is evolving</h3>
           <p style="max-width:900px; margin:0 auto;">
-            From writing every line of code to <strong>architecting, reviewing, and orchestrating</strong> autonomous agents.
+            From writing every line of code to
+            <strong style="color:#5dade2;">architecting</strong>,
+            <strong style="color:#5dade2;">reviewing</strong>, and
+            <strong style="color:#5dade2;">orchestrating</strong> autonomous agents.
             The best developers will be those who learn to delegate effectively.
           </p>
         </div>
