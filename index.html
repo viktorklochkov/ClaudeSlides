@@ -30,7 +30,7 @@
           from autocomplete to autonomous engineering
         </p>
         <p style="font-size:0.7em; color:var(--c-text); margin-top:1em; font-weight:500;">Viktor Klochkov</p>
-        <p class="title-meta">2025 &middot; Press <kbd>S</kbd> for speaker notes</p>
+        <p class="title-meta">2026 &middot; Press <kbd>S</kbd> for speaker notes</p>
         <p style="font-size:0.65em; color:var(--c-text-light); margin-top:1.5em;">
           Inspired by
           <a href="https://yermilov.github.io/pragmatic-vibe-clauding-ua/" target="_blank" style="color:var(--c-claude); font-weight:600;">
@@ -581,6 +581,50 @@ each file to verify correctness.</code></pre>
             </ul>
           </div>
         </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════
+           SLIDE 10b — Autonomous C Compiler
+           ════════════════════════════════════════════════ -->
+      <section>
+        <div class="slide-accent-bar"></div>
+        <span class="section-subtitle">Case Study</span>
+        <h2>Claude Built a C Compiler <span class="badge badge-new">100k Lines</span></h2>
+
+        <p style="font-size:0.75em; color:var(--c-text-light); margin-bottom:0.6em;">
+          Anthropic researcher <strong style="color:var(--c-primary);">Nicholas Carlini</strong> ran ~2,000 Claude Code sessions in a loop for two weeks &mdash; with <strong>zero human code</strong>.
+        </p>
+
+        <div class="comparison-grid">
+          <div class="col claude-col">
+            <h3>What Happened</h3>
+            <ul>
+              <li class="fragment fade-up"><strong>100k lines of Rust</strong> &mdash; a fully autonomous C compiler</li>
+              <li class="fragment fade-up"><strong>Builds Linux 6.9</strong> across x86, ARM, and RISC-V</li>
+              <li class="fragment fade-up"><strong>Compiles real software</strong> &mdash; QEMU, FFmpeg, SQLite, PostgreSQL, Redis</li>
+              <li class="fragment fade-up"><strong>Agents coordinated via git</strong> &mdash; file-based locking prevented duplicate work</li>
+              <li class="fragment fade-up"><strong>Cost: ~$20,000</strong> &mdash; 2B input tokens, 140M output tokens</li>
+            </ul>
+          </div>
+          <div class="col copilot-col">
+            <h3>Limitations</h3>
+            <ul>
+              <li class="fragment fade-up"><strong>No 16-bit x86</strong> &mdash; can't generate real-mode boot code (falls back to GCC)</li>
+              <li class="fragment fade-up"><strong>No assembler/linker</strong> &mdash; depends on external toolchain</li>
+              <li class="fragment fade-up"><strong>Less optimized output</strong> &mdash; slower than GCC even with optimizations off</li>
+              <li class="fragment fade-up"><strong>Code quality gaps</strong> &mdash; functional Rust, but not expert-level</li>
+              <li class="fragment fade-up"><strong>Regressions</strong> &mdash; new features frequently broke existing ones</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="claude-bg fragment fade-up" style="margin-top:0.8em; font-size:0.72em; padding:12px 20px;">
+          <strong>Takeaway:</strong> This demonstrates that AI agents can sustain goal-directed work at massive scale &mdash; but also that human-written compilers maintain clear advantages in efficiency and reliability. The scaffolding matters: well-designed tests and clear progress tracking were essential for the agents to make progress.
+        </div>
+
+        <aside class="notes">
+          Nicholas Carlini, a safety researcher at Anthropic, ran this as an experiment in autonomous software development. Multiple Claude instances worked in parallel on a shared repo using git for coordination. The key insight: "the scaffolding runs Claude in a loop, but that loop is only useful if Claude can tell how to make progress." Success required meticulously designed tests and specialized agent roles. This is both impressive and humbling — it shows the potential and the limits of current AI agents.
+        </aside>
       </section>
 
       <!-- ════════════════════════════════════════════════
